@@ -1,14 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Props 
 // コンポーネントに属性を与える
-
 
 const App = () => {
   const profiles = [
     { name: "Taro", age: 10 },
     { name: "Hanako", age: 7 },
-    { name: "Unknown" }
   ]
 
   return (
@@ -19,8 +18,10 @@ const App = () => {
         })
       }     
 
-      {/* <User name={"Taro"} age={20} />
-      <User name={"Hanako"} age={14} /> */}
+      {/* 
+      <User name={"Taro"} age={20} />
+      <User name={"Hanako"} age={14} /> 
+      */}
 
     </div>
     
@@ -31,9 +32,9 @@ const User = (props) => {
   return <div>Hi, I'm {props.name}! I'm {props.age} years old. </div>
 }
 
-// 指定がなかった場合のデフォルトpropsを定義
-User.defaultProps = {
-  age: 1
+User.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired
 }
 
 export default App;
