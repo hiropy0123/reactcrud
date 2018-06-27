@@ -1,33 +1,29 @@
 import React, { Component } from 'react';
 
-// JSX記法
-class App extends Component {
-  render() {
-    const greeting = "Hi! ";
-    const dom = (
-      <React.Fragment>
-        <h1 className="foo">{greeting} Hello World</h1>
-        <label htmlFor="name">名前</label>
-        <input type="text" onClick={() => {console.log("Clicked!!")}} />
-      </React.Fragment>
-    );
-    return dom;
-  }
-}
-
-// Reactでは一つのタグで囲まれたものしかかえすことはできない。
-// <div>で囲むと余計なタグが増えてしまうので、
-// そのような場合には、<React.Fragment>で囲むと良い。
-
-// // JavaScript記法
+// // クラスコンポーネント
 // class App extends Component {
 //   render() {
-//     return React.createElement (
-//       "h1",
-//       null,
-//       "Hello World!!"
-//     );
+//     return (
+//       <div>Hello!! I'm class component!</div>
+//     )
 //   }
 // }
+
+// 関数コンポーネント
+const App = () => {
+  return (
+    <div>
+      <h1>Hello!! I'm functional component!</h1>
+      <Cat />
+      <Cat />
+      <Cat />
+    </div>
+    
+  )
+}
+
+const Cat = () => {
+  return <div>Meow!!</div>
+}
 
 export default App;
