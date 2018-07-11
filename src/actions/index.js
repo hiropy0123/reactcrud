@@ -10,7 +10,7 @@ export const increment = () => ({
 export const decrement = () => ({
   type: DECREMENT
 })
- 
+
 // Action Creator は increment, decrement の関数
 // Action は type で宣言される INCREMENT, DECREMENT
 

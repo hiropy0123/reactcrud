@@ -11,6 +11,10 @@ module.exports = {
         },
         "sourceType": "module"
     },
+    "globals": {
+        "window": true,
+        "document": true
+    },
     "plugins": [
         "react"
     ],
@@ -37,10 +41,10 @@ module.exports = {
         "brace-style": "error",
         "callback-return": "error",
         "camelcase": "error",
-        "capitalized-comments": [
-            "error",
-            "never"
-        ],
+        // "capitalized-comments": [
+        //     "error",
+        //     "never"
+        // ],
         "class-methods-use-this": "error",
         "comma-dangle": "error",
         "comma-spacing": [
@@ -59,7 +63,7 @@ module.exports = {
         "default-case": "error",
         "dot-location": "error",
         "dot-notation": "error",
-        "eol-last": "error",
+        // "eol-last": "error",
         "eqeqeq": "error",
         "for-direction": "error",
         "func-call-spacing": "error",
