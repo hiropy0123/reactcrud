@@ -1,29 +1,15 @@
+import axios from 'axios'
 
-// Reducerでも使用するので、定数として外部でも利用できる形に定義しておく
-export const INCREMENT = 'INCREMENT'
-export const DECREMENT = 'DECREMENT'
+export const READ_EVENTS = 'READ_EVENTS'
 
-export const increment = () => ({
-  type: INCREMENT
-})
+const ROOT_URL = 'https://udemy-utils.herokuapp.com/api/v1'
+const QUERYSTRING = '?token=token123'
 
-export const decrement = () => ({
-  type: DECREMENT
-})
+export const readEvents = () => async dispatch => {
+  const response = await axios.get(`${ROOT_URL}/events${QUERYSTRING}`)
 
-// Action Creator は increment, decrement の関数
-// Action は type で宣言される INCREMENT, DECREMENT
+  // console.log(response)
+  dispatch({ type: READ_EVENTS, response })
+}
 
-// Action Creator を作成する
-// const increment = () => {
-//   return {
-//     type: 'INCREMENT'
-//   }
-// }
-
-// const decrement = () => {
-//   return {
-//     type: 'DECREMENT'
-//   }
-// }
-// return を省略する
+// axios はhttpクライント
