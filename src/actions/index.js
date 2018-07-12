@@ -11,5 +11,3 @@ export const readEvents = () => async dispatch => {
   // console.log(response)
   dispatch({ type: READ_EVENTS, response })
 }
-
-// axios はhttpクライント
