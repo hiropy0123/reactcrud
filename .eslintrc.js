@@ -45,7 +45,7 @@ module.exports = {
         //     "error",
         //     "never"
         // ],
-        "class-methods-use-this": "error",
+        "class-methods-use-this": 1,
         "comma-dangle": "error",
         "comma-spacing": [
             "error",
