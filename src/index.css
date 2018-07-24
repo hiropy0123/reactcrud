@@ -3,3 +3,9 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.error {
+  color: #f10000;
+  font-size: 12px;
+  font-weight: bold;
+}

@@ -45,7 +45,7 @@ module.exports = {
         //     "error",
         //     "never"
         // ],
-        "class-methods-use-this": 1,
+        // "class-methods-use-this": 0,
         "comma-dangle": "error",
         "comma-spacing": [
             "error",
@@ -100,10 +100,10 @@ module.exports = {
         ],
         "lines-around-comment": "error",
         "lines-around-directive": "error",
-        "max-depth": "error",
-        "max-len": "error",
-        "max-lines": "error",
-        "max-nested-callbacks": "error",
+        // "max-depth": "error",
+        // "max-len": "error",
+        // "max-lines": "error",
+        // "max-nested-callbacks": "error",
         "max-params": "error",
         "max-statements": "error",
         "max-statements-per-line": "error",
