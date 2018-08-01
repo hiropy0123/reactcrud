@@ -5,38 +5,58 @@ import { Link } from 'react-router-dom'
 
 import { readEvents } from '../actions'
 
+// Material UI
+// import { withStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
+import Paper from '@material-ui/core/Paper'
+import Button from '@material-ui/core/Button'
+import AddIcon from '@material-ui/icons/Add'
+
 class EventsIndex extends Component {
   componentDidMount() {
     this.props.readEvents();
   }
   renderEvents() {
     return _.map(this.props.events, event => (
-          <tr key={event.id}>
-            <td>{event.id}</td>
-            <td>
+          <TableRow key={event.id}>
+            <TableCell>{event.id}</TableCell>
+            <TableCell>
               <Link to={`/events/${event.id}`}>{event.title}</Link>
-            </td>
-            <td>{event.body}</td>
-          </tr>
+            </TableCell>
+            <TableCell>{event.body}</TableCell>
+          </TableRow>
     ))
   }
   render() {
     return (
       <React.Fragment>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Title</th>
-              <th>Body</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.renderEvents()}
-          </tbody>
-        </table>
+        <Typography>
+          <Paper>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>ID</TableCell>
+                  <TableCell>Title</TableCell>
+                  <TableCell>Body</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {this.renderEvents()}
+              </TableBody>
+            </Table>
+          </Paper>
 
-        <Link to="/events/new">New Events</Link>
+          <Link to="/events/new">
+            <Button>
+              <AddIcon />
+            </Button>
+          </Link>
+        </Typography>
       </React.Fragment>
     )
   }
