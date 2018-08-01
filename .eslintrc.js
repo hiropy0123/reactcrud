@@ -122,6 +122,7 @@ module.exports = {
         "no-bitwise": "error",
         "no-buffer-constructor": "error",
         "no-caller": "error",
+        "no-case-declarations": 0,
         "no-catch-shadow": "error",
         "no-confusing-arrow": "error",
         "no-console": 1,
