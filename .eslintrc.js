@@ -107,14 +107,14 @@ module.exports = {
         "max-params": "error",
         "max-statements": "error",
         "max-statements-per-line": "error",
-        "multiline-ternary": "error",
+        // "multiline-ternary": "error",
         "new-cap": "error",
         "new-parens": "error",
-        "newline-after-var": [
-            "error",
-            "always"
-        ],
-        "newline-before-return": "error",
+        // "newline-after-var": [
+        //     "error",
+        //     "always"
+        // ],
+        // "newline-before-return": "error",
         "newline-per-chained-call": "error",
         "no-alert": "error",
         "no-array-constructor": "error",
@@ -122,6 +122,7 @@ module.exports = {
         "no-bitwise": "error",
         "no-buffer-constructor": "error",
         "no-caller": "error",
+        "no-case-declarations": 0,
         "no-catch-shadow": "error",
         "no-confusing-arrow": "error",
         "no-console": 1,
@@ -168,7 +169,7 @@ module.exports = {
         "no-param-reassign": "error",
         "no-path-concat": "error",
         "no-plusplus": "error",
-        "no-process-env": "error",
+        // "no-process-env": "error",
         "no-process-exit": "error",
         "no-proto": "error",
         "no-prototype-builtins": "error",
@@ -188,7 +189,7 @@ module.exports = {
         "no-sync": "error",
         "no-tabs": "error",
         "no-template-curly-in-string": "error",
-        "no-ternary": "error",
+        // "no-ternary": "error",
         "no-throw-literal": "error",
         "no-trailing-spaces": "error",
         "no-undef-init": "error",
@@ -234,7 +235,7 @@ module.exports = {
         "prefer-destructuring": "off",
         "prefer-numeric-literals": "error",
         "prefer-promise-reject-errors": "error",
-        "prefer-reflect": "error",
+        // "prefer-reflect": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "error",
@@ -250,10 +251,10 @@ module.exports = {
         "semi-spacing": "error",
         "semi-style": "error",
         "sort-imports": "off",
-        "sort-keys": [
-            "error",
-            "desc"
-        ],
+        // "sort-keys": [
+        //     "error",
+        //     "desc"
+        // ],
         "sort-vars": "error",
         "space-before-blocks": "error",
         "space-before-function-paren": "off",
